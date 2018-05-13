@@ -10,9 +10,9 @@ import UIKit
 import Foundation
 import AlertActionBuilder
 
-extension UIAlertController {
+public extension UIAlertController {
 
-    public static func build(title: String?, message: String?, actionsConfiguration: [AlertActionConfig],
+    static func build(title: String?, message: String?, actionsConfiguration: [AlertActionConfig],
                              preferredStyle: UIAlertControllerStyle) -> UIAlertController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: preferredStyle)
         actionsConfiguration.forEach { (actionConfiguration) in
