@@ -12,14 +12,13 @@ import AlertActionBuilder
 
 public extension UIAlertController {
 
-    static func build(title: String?, message: String?, actionsConfiguration: [AlertActionConfigProvider],
-                             preferredStyle: UIAlertControllerStyle) -> UIAlertController {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: preferredStyle)
+    convenience init(title: String?, message: String?, actionsConfiguration: [AlertActionConfigProvider],
+                             preferredStyle: UIAlertControllerStyle) {
+        self.init(title: title, message: message, preferredStyle: preferredStyle)
         actionsConfiguration.forEach { (actionConfiguration) in
-            let alertAction = UIAlertAction.build(from: actionConfiguration)
-            alert.addAction(alertAction)
+            let alertAction = UIAlertAction(from: actionConfiguration)
+            self.addAction(alertAction)
         }
-        return alert
     }
 
 }
