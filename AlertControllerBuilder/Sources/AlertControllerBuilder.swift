@@ -12,7 +12,7 @@ import AlertActionBuilder
 
 public extension UIAlertController {
 
-    static func build(title: String?, message: String?, actionsConfiguration: [AlertActionConfig],
+    static func build(title: String?, message: String?, actionsConfiguration: [AlertActionConfigProvider],
                              preferredStyle: UIAlertControllerStyle) -> UIAlertController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: preferredStyle)
         actionsConfiguration.forEach { (actionConfiguration) in
