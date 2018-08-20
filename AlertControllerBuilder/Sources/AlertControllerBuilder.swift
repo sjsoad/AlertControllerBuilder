@@ -16,9 +16,9 @@ public extension UIAlertController {
                              preferredStyle: UIAlertControllerStyle) {
         self.init(title: title, message: message, preferredStyle: preferredStyle)
         actionsConfiguration.forEach { (alertActionConfigProvider) in
-            let alertAction = UIAlertAction(from: alertActionConfigProvider)
+            let alertAction = UIAlertAction(with: alertActionConfigProvider)
             addAction(alertAction)
         }
     }
-
+    
 }
