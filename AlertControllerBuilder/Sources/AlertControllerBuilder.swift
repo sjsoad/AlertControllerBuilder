@@ -11,13 +11,13 @@ import Foundation
 import AlertActionBuilder
 
 public extension UIAlertController {
-
+    
     convenience init(title: String?, message: String?, actionsConfiguration: [AlertActionConfigProvider],
                              preferredStyle: UIAlertControllerStyle) {
         self.init(title: title, message: message, preferredStyle: preferredStyle)
-        actionsConfiguration.forEach { (actionConfiguration) in
-            let alertAction = UIAlertAction(from: actionConfiguration)
-            self.addAction(alertAction)
+        actionsConfiguration.forEach { (alertActionConfigProvider) in
+            let alertAction = UIAlertAction(from: alertActionConfigProvider)
+            addAction(alertAction)
         }
     }
 
