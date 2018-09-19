@@ -2,14 +2,14 @@ Pod::Spec.new do |s|
 
 # 1
 s.platform = :ios
-s.swift_version = '4.0'
+s.swift_version = '4.2'
 s.ios.deployment_target = '10.0'
 s.name = "SKAlertControllerBuilder"
 s.summary = "SKAlertControllerBuilder allows you to create AlertController with config"
 s.requires_arc = true
 
 # 2
-s.version = "0.0.6"
+s.version = "0.0.7"
 
 # 3
 s.license = { :type => "MIT", :file => "LICENSE" }
